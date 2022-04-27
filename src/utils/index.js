@@ -18,9 +18,7 @@ exports.deleteMovie = async (collection, movieObj) => {
 
 exports.updateMovie = async (collection, movieObj, updateObj) => {
 	try {
-		const updateEntry = await collection.updateOne(movieObj, {
-			$set: { updateObj },
-		});
+		const updateEntry = await collection.updateOne(movieObj, updateObj);
 		console.log(updateEntry);
 	} catch (error) {
 		console.log(error);

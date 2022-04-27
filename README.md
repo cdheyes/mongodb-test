@@ -12,3 +12,5 @@ node src/app.js --list
 node src/app.js --add --title="Star Wars" --actor="Chewy"
 node src/app.js --delete --title="Star Wars" --actor="Chewy"
 node src/app.js --update --title="Star Wars" --actor="Chewy" --title="Raiders" --actor="Indie"
+
+node src/app.js --update --title="Star Wars" --actor="Solo"

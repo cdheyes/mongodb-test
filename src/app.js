@@ -22,17 +22,16 @@ const app = async (yargsObj, updateObj) => {
 			actor: yargsObj.actor,
 		});
 	} else if (yargsObj.update) {
-		let updateObj = [{ title: "", actor: "" }];
+		let updateObj = yargsObj;
 		await updateMovie(
 			collection,
 			{
 				title: yargsObj.title,
-				actor: yargsObj.actor,
 			},
 			{
-				// do these need to be difined or passed after else if
-				title: updateObj.title,
-				actor: updateObj.actor,
+				$set: {
+					actor: updateObj.actor,
+				},
 			}
 		);
 	} else if (yargsObj.list) {
